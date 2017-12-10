@@ -1,0 +1,287 @@
+body,header,div {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-size: 62.5%;
+	font-family: "微软雅黑";
+}
+header {
+	background: #1d7ad9;
+	height: 2.5rem;
+	width: 100%;
+	position: fixed;	
+	top: 0;
+	z-index: 999;
+}
+.hotline {
+	margin-left: 10%;
+	height: 2.5rem;
+	width: 13rem;
+	color: white;
+	text-align: center;
+	line-height: 2.5rem;
+	display: inline-block;
+}
+@media screen and (max-width: 320px) {
+    .hotline {
+    	width: 6rem;
+    	margin-left: 4%;
+    }
+}
+@media screen and (max-width: 180px) {
+	.hotline {
+		display: none;
+	}
+}
+.hotline p {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.loginregistration {
+	display: inline-block;
+	height: 2.5rem;
+	width: 7rem;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	float: right;
+	margin-right: 10%;
+}
+#registration {
+	width: 50%;
+	height: 2.5rem;
+	display: inline-block;
+    background: white;
+	float: left;
+	text-align: center;
+	line-height: 2.5rem;
+	color: #000000;
+}
+#login {
+	width: 50%;
+	height: 2.5rem;
+	display: inline-block;
+    background: #1d7ad9;
+	float: left;
+	text-align: center;
+	line-height: 2.5rem;
+	color: white;
+}
+#login:hover {
+    width: 60%;
+    color: #000000;
+    background: white;
+
+}
+#login:hover +#registration {
+	width: 40%;
+	color: white;
+	background: #1d7ad9;
+}
+.registration:hover {
+	width: 50%;
+	color: #000000；
+	background: white;
+}
+.registration:hover +#login {
+	width: 40%;
+	color: white;
+	background: #1d7ad9;
+}/*登录注册切换效果*/
+.menu {
+	width: 100%;
+	height: 6rem;
+	margin-top: 2.5rem;
+	background: #f9f9f9;
+}
+.blank {
+	width: 50%;
+	height: 6rem;
+	display: inline-block;
+	float: left;
+}
+.Select {
+	width: 50%;
+	height: 6rem;
+	display: inline-block;
+	float: right;
+	display: flex;
+	align-items: center;
+}
+.btn-info {
+    background: #1d7ad9;
+    border: 1px solid #1d7ad9;
+    color: white;
+    text-align: center;
+    width: 6rem;
+    height: 3rem;
+    line-height: 1.8rem;
+    border-radius: 5px;
+}
+.btn-default {
+	background: white;
+	color: #000000;
+	text-align: center;
+	width: 8rem;
+	height: 3rem;
+	line-height: 1.8rem;
+	border-radius: 5px;
+	margin-left: 3%;
+	font-weight: bold;
+}
+@media (max-width: 800px) {
+	.Select {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.blank {
+		display: none;
+	}
+}
+.plate {
+	width: 100%;
+}
+.grayline {
+	width: 25%;
+	height: 5px;
+	background: #cccccc;
+	position: relative;
+}
+.sequence {
+	height: 1.5rem;
+	width: 1.5rem;
+	border-radius: 50%;
+	background: red;
+	left: 40%;
+	top: -120%;
+	position: absolute;
+	background: #cccccc;
+}
+.captions {
+	position: absolute;
+	left:20%;
+	top: 500%;
+	color: #cccccc;
+	font-size: 1.7rem;
+}
+.grayline:hover {
+	background: #ff7f02;
+	color: #ff7f02;
+}
+.grayline:hover .sequence {
+	background: #ff7f02;
+}
+.grayline:hover .captions {
+	color: #ff7f02;
+}
+.bigtitle {
+	width: 100%;
+	height: 2.5rem;
+	border-left: 3px solid #1d7ad9;
+	margin-top: 5%;
+	font-size: 1.7rem;
+	font-weight: bold;
+	line-height: 2rem;
+	white-space: nowrap;
+}
+@media (max-width: 500px) {
+	.bigtitle {
+		margin-top: 25%;
+	}
+}
+@media (max-width: 200px) {
+	.bigtitle {
+		display: none;
+	}
+}
+table {
+	border: 1px solid #e8e8e8;
+}
+td {
+	padding: 1rem;
+	color: #1d7ad9;
+	font-size: 2rem;
+	background: #f3f3f3;
+	font-weight: bold;
+}
+th {
+	padding: 2rem;
+	color: gray;
+	background: #fbfcff;
+	font-size: 1.6rem;
+	white-space: nowrap;
+}
+input[type=radio] {  /*隐藏原先的样式*/
+    display: inline-block; /*表现形式为行内块级*/  
+    vertical-align: middle;  /*垂直居中一个图片*/
+    width: 20px;  
+    height: 20px;  
+    -webkit-appearance: none;  /*清除默认外观样式*/
+    background-color: transparent;  /*背景颜色为透明*/
+    border: 0;  
+    outline: 0 !important;  
+    line-height: 25px;  
+    color: #d8d8d8;  
+}  
+input[type=radio]:after  {  /*画一个圆形外观*/
+    content: "";  
+    display:block;  
+    width: 20px;  
+    height: 20px;  
+    border-radius: 50%;  
+    text-align: center;  
+    line-height: 14px;  
+    font-size: 16px;  
+    color: #fff;  
+    border: 2px solid #ddd;  
+    background-color: #fff;  
+    box-sizing:border-box;  
+}  
+input[type=radio]:checked:after  {  /*点击效果*/
+    content: "";  
+    background-image: url(004.png);  
+}  
+input[type=text] {
+	width: 5.5rem;
+	display: inline-block;
+	border-radius: 5px;
+}
+@media (max-width: 1260px) {
+	    table, tbody, th, td, tr {  
+        display: block;  
+    } 
+    th {
+    	padding: 0.5rem;
+    }
+}
+.anniu {
+	height: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #e8e8e8;
+}
+.bn {
+	width: 10rem;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	font-size: 1.7rem;
+	color: white;
+	background: #e15053;
+	border-radius: 5%;
+
+}
+.UBW {
+	line-height: 2rem;
+	text-align: center;
+	background: #f3f3f3;
+	font-size: 1.2rem;
+	color: gray;
+}
+@media (min-width: 1200px) {
+	#rightcenter {
+		text-align: right;
+	}
+}
