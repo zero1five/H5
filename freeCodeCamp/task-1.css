@@ -1,0 +1,98 @@
+body,div,h1,small,p,h2 {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-size: 62.5%;
+	font-family: "Microsoft Yahei";
+}
+.content {
+	background: #e6e8e8;
+    width: 60%;
+    margin: 3rem auto;
+    border-radius: 10px;
+}
+@media (max-width: 600px) {
+	.content {
+		width: 90%;
+		margin-top: 2rem;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	small {
+		font-size: 1rem;
+		line-height: 0.5rem;
+	}
+}
+.top {
+	margin-top: 1rem;
+	width: 100%;
+	height: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	font-size: 2rem;
+}
+small {
+	float: right;
+	margin-right: 10%;
+}
+.picture {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-top: 7rem;
+	background: white;
+	border: 2px solid white;
+	border-radius: 10px;
+}
+.pic {
+	width: 100%;
+}
+@media (max-width: 700px) {
+	.picture {
+		margin-top: 2rem;
+	}
+}
+.life {
+	width: 100%;
+	display: block;
+	margin-left: 15%;
+	margin-top: 2rem;
+	font-size: 1.5rem;
+}
+.detail {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.9rem;
+}
+li p {
+	text-indent: 2em;
+	padding: 1rem;
+}
+strong {
+	color: red;
+}
+ul {
+	padding-left: 20px;
+}
+ol {
+	padding: 1rem;
+}
+@media (max-width: 900px) {
+	.detail {
+		width: 100%;
+	}
+}
+.end {
+	text-align: center;
+	width: 10rem;
+	padding: 2rem;
+	margin-left: 10%;
+}
+
+.end p {
+	padding: 0.5rem;
+}
