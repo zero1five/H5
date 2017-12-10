@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>player</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="icon" href="img/favicon.ico" type="img/x-ico"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/style.js"></script>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body id="body">
+	<header>
+		<div class="submenu">
+			<div class="fa fa-exchange fa-2x"></div>
+		</div>
+		<div class="logo">baidu音乐</div>
+		<div class="menu">
+			<div class="navmenu"><a href="#">发现音乐</a></div>
+			<div class="navmenu"><a href="#">我的音乐</a></div>
+			<div class="navmenu"><a href="#">社区</a></div>
+			<div class="ico">
+				<div class="fa fa-music fa-2x"></div>
+			</div>
+			<div class="ico">
+				<div class="fa fa-apple fa-2x"></div>
+			</div>
+			<div class="ico">
+				<div class="fa fa-user-o fa-2x"></div>
+			</div>
+		</div>
+		<div class="search">
+			<input type="text" name="查询歌曲" class="input" value="请输入你喜欢的吧~" onfocus="javascript:if(this.value=='请输入你喜欢的吧~')this.value='';">
+			<div class="fa fa-search fa-1x ii"></div>
+		</div>
+	</header>
+	<main>
+		<div class="Light-shadow">
+			<div id="Carousel">
+				<div class="mask"></div>
+				<img id="img1">
+				<div class="growp" id="growp"></div>
+			</div>
+		    <div id="myCarousel" class="carousel slide Shuffling">
+			    <ol class="carousel-indicators">
+			        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			        <li data-target="#myCarousel" data-slide-to="1"></li>
+			        <li data-target="#myCarousel" data-slide-to="2"></li>
+			        <li data-target="#myCarousel" data-slide-to="3"></li>
+			    </ol>   
+			    <div class="carousel-inner">
+			        <div class="item active">
+			            <img src="img/1.gif" alt="First slide">
+			        </div>
+			        <div class="item">
+			            <img src="img/2.gif" alt="Second slide">
+			        </div>
+			        <div class="item">
+			            <img src="img/3.gif" alt="Third slide">
+			        </div>
+			        <div class="item">
+			            <img src="img/4.gif" alt="four slide">
+			        </div>
+			    </div>
+			    <a class="carousel-control left" href="#myCarousel" 
+			       data-slide="prev"></a>
+			    <a class="carousel-control right" href="#myCarousel" 
+			       data-slide="next"></a>
+		    </div>              
+			<div class="music-list container-fluid">
+				<div class="recommend">
+					<div class="week"><i class="fa fa-spinner" aria-hidden="true"></i> 本周热推</div>
+					<a href="#"><div class="subweek">华语</div></a>
+					<a href="#"><div class="subweek">流行</div></a>
+					<a href="#"><div class="subweek">摇滚</div></a>
+					<a href="#"><div class="subweek">民谣</div></a>
+					<a href="#"><div class="subweek">电子</div></a>
+				<a href="#"><div class="more">更多 <i class="fa fa-arrow-right" aria-hidden="true"></i></div></a>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4">
+						<div class="imgshelf"><a href="#"><img src="img/bt1.jpg"></a>
+							<div class="mask-data">
+								<p><i class="fa fa-headphones" aria-hidden="true"></i> 442万</p>
+								<a href="#"><div class="fa fa-play-circle play" aria-hidden="true"></div></a>
+							</div>
+					    </div>
+						<p> 冬马一生追</p>
+					</div>
+					<div class="col-md-3 col-xs-4">
+						<div class="imgshelf"><a href="#"><img src="img/bt2.jpg"></a>
+							<div class="mask-data">
+								<p><i class="fa fa-headphones" aria-hidden="true"></i> 15万</p>
+								<a href="#"><div class="fa fa-play-circle play" aria-hidden="true"></div></a>
+							</div>							
+					    </div>
+						<p>「纯音」年少曾问旅路 只见云深不知处</p>
+					</div>
+					<div class="col-md-3 col-xs-4">
+						<div class="imgshelf"><a href="#"><img src="img/bt3.jpg"></a>
+							<div class="mask-data">
+								<p><i class="fa fa-headphones" aria-hidden="true"></i> 99万</p>
+								<a href="#"><div class="fa fa-play-circle play" aria-hidden="true"></div></a>
+							</div>
+					    </div>
+						<p> 梦幻流行 I 纵晨霭所往，长眠雪森</p>
+					</div>
+					<div class="col-md-3 col-xs-4">
+						<div class="imgshelf"><a href="#"><img src="img/bt4.jpg"></a>
+							<div class="mask-data">
+								<p><i class="fa fa-headphones" aria-hidden="true"></i> 57081</p>
+								<a href="#"><div class="fa fa-play-circle play" aria-hidden="true"></div></a>
+							</div>
+						</div>
+						<p> 韩语|男女对唱小情歌 忍不住想恋爱呀</p>
+					</div>
+					<div class="col-md-3 col-xs-4">
+						<div class="imgshelf"><a href="#"><img src="img/bt5.jpg"></a>
+							<div class="mask-data">
+								<p><i class="fa fa-headphones" aria-hidden="true"></i> 1120万</p>
+								<a href="#"><div class="fa fa-play-circle play" aria-hidden="true"></div></a>
+							</div>
+						</div>
+						<p>阔别三年， Taylor Swift第六张录音专辑《Reputation》</p>
+					</div>
+					<div class="col-md-3 col-xs-4">
+						<div class="imgshelf"><a href="#"><img src="img/bt6.jpg"></a>
+							<div class="mask-data">
+								<p><i class="fa fa-headphones" aria-hidden="true"></i> 90万</p>
+								<a href="#"><div class="fa fa-play-circle play" aria-hidden="true"></div></a>
+							</div>
+						</div>
+						<p>日式少年音，温柔少年心</p>
+					</div>
+					<div class="col-md-3 col-xs-4">
+						<div class="imgshelf"><a href="#"><img src="img/bt7.jpg"></a>
+							<div class="mask-data">
+								<p><i class="fa fa-headphones" aria-hidden="true"></i> 59万</p>
+								<a href="#"><div class="fa fa-play-circle play" aria-hidden="true"></div></a>
+							</div>
+						</div>
+						<p>治愈「那些难捱的孤独岁月」</p>
+					</div>
+					<div class="col-md-3 col-xs-4">
+						<div class="imgshelf"><a href="#"><img src="img/bt8.jpg"></a>
+							<div class="mask-data">
+								<p><i class="fa fa-headphones" aria-hidden="true"></i> 119万</p>
+								<a href="#"><div class="fa fa-play-circle play" aria-hidden="true"></div></a>
+							</div>
+						</div>
+						<p>飞吧，少年、让这个青春不留遗憾</p>
+					</div>					
+				</div>
+        <div class="musicmenutwo">
+        	<div class="recommend">	
+        		<div class="week"><i class="fa fa-meetup fa-2x" aria-hidden="true"></i> 音乐巅峰榜</div>
+        		<a href="#"><div class="more">更多 <i class="fa fa-arrow-right" aria-hidden="true"></i></div></a>
+        	</div>       	 
+        	<div class="hotshelf">
+        		<span id="ranking">1</span>
+        		<a href="#"><div id="singer">绿光</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>
+        	</div>
+            <div class="iceshelf">
+            	<span id="ranking">2</span>
+            	<a href="#"><div id="singer">扉をあけて</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>            	
+            </div>
+        	<div class="hotshelf">
+        		<span id="ranking">3</span>
+        		<a href="#"><div id="singer">Xenogenesis (Original Mix)</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>        		
+            </div>
+            <div class="iceshelf">
+            	<span>4</span>
+            	<a href="#"><div id="singer">无限大</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>            	
+            </div>
+        	<div class="hotshelf">
+        		<span>5</span>
+        		<a href="#"><div id="singer">고백 연습</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>        		
+        	</div>
+            <div class="iceshelf">
+            	<span>7</span>
+            	<a href="#"><div id="singer">至少还有你</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>            	
+            </div>
+        	<div class="hotshelf">
+        		<span>8</span>
+        		<a href="#"><div id="singer">Wicked Wonderland</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>        		
+        	</div>
+            <div class="iceshelf">
+            	<span>9</span>
+            	<a href="#"><div id="singer">一个师傅仨徒弟</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>            	
+            </div>   
+        </div>				
+			</div>
+		</div>
+        <div class="musicmenu">
+        	<div class="recommend">	
+        		<div class="week"><i class="fa fa-meetup fa-2x" aria-hidden="true"></i> 音乐巅峰榜</div>
+        		<a href="#"><div class="more">更多 <i class="fa fa-arrow-right" aria-hidden="true"></i></div></a>
+        	</div>
+        	<div class="blankshelf"></div>
+        	<div class="hotshelf">
+        		<span id="ranking">1</span>
+        		<a href="#"><div id="singer">绿光</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>
+        	</div>
+            <div class="iceshelf">
+            	<span id="ranking">2</span>
+            	<a href="#"><div id="singer">扉をあけて</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>            	
+            </div>
+        	<div class="hotshelf">
+        		<span id="ranking">3</span>
+        		<a href="#"><div id="singer">Xenogenesis (Original Mix)</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>        		
+            </div>
+            <div class="iceshelf">
+            	<span>4</span>
+            	<a href="#"><div id="singer">无限大</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>            	
+            </div>
+        	<div class="hotshelf">
+        		<span>5</span>
+        		<a href="#"><div id="singer">고백 연습</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>        		
+        	</div>
+            <div class="iceshelf">
+            	<span>7</span>
+            	<a href="#"><div id="singer">至少还有你</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>            	
+            </div>
+        	<div class="hotshelf">
+        		<span>8</span>
+        		<a href="#"><div id="singer">Wicked Wonderland</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>        		
+        	</div>
+            <div class="iceshelf">
+            	<span>9</span>
+            	<a href="#"><div id="singer">一个师傅仨徒弟</div></a>
+        		<a href="#"><i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i></a>            	
+            </div>                 
+        </div>
+	</main><!--制作播放器-->
+    <footer>
+    	
+    </footer>
+</body>
+</html>

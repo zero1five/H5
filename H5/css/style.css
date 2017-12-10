@@ -1,0 +1,401 @@
+body,div,p,h2 {
+	padding: 0;
+	margin: 0;
+}
+a:visited, a:link, a:active {
+    text-decoration: none !important;
+    color: white !important;
+}
+a:hover {
+	text-decoration: none !important;
+	color: black !important;
+}
+#body {
+	font-size: 62.5%;
+	background: #f5f5f5;
+	font-family: "Microsoft Yahei";
+} 
+header,footer {
+	position: fixed;
+	width: 100%;
+	height: 4rem;
+}
+header {
+	z-index: 999;
+	top: 0;
+	background: #333333;
+	box-shadow: 0px 0px 10px rgba(0,0,0,10);
+}
+main {}
+
+footer {
+	bottom: 0;
+	background: black;
+	background-color: rgba(0,0,0,0.8);
+}
+.submenu,.logo {
+	position: relative;
+	height: 4rem;
+	line-height: 4rem;
+	color: white;
+}
+.submenu {
+	left: 2rem;
+	display: none;
+}
+.logo {
+	left: 6.5rem;
+	font-size: 2rem;
+	display: inline-block;
+}
+.menu {
+	position: absolute;
+	right: 25vw;
+	height: 4rem;
+	display: inline-block;
+	color: white;
+	font-size: 1rem;
+	line-height: 4rem;
+	transition: all 1s;
+}
+.navmenu {
+   width: 6.5rem;
+   float: left;
+   text-align: center;
+}
+.navmenu:hover {
+    background: white;
+    transition: all 1s;
+    color: black;
+    margin-right: 1rem;
+}
+.ico {
+	margin: 0 auto;
+	display: none;
+}
+.search {
+	position:absolute;
+	right: 15rem;
+	width: 15rem;
+	height: 4rem;
+    display: inline-block;
+}
+.input {
+	width: 12rem;
+	height: 2.5rem;
+	margin: .75rem 0;
+	border-radius: 30px;
+	border: 0;
+	outline:none;
+	padding-left: 12px;
+}
+.ii {
+	position: relative;
+	right: 2.5rem;
+}
+/*整合媒体查询*/
+@media (max-width: 768px) {
+    .logo,.navmenu {
+    	display: none;
+    }
+    .submenu {
+    	display: inline-block;
+    }
+    .menu {
+    	width: 12rem;
+        left: 50%;
+        transform: translate(-50%);
+    	line-height: 4rem;
+    }
+    .ico {
+    	display: inline-block;
+    	padding: 5px 8px;
+    	width: 3.5rem;
+    	margin: 0 auto;
+    	text-align: center;
+    }
+    .search {
+    	display: none;
+    }
+}
+@media (max-width: 1350px) {
+	.search {
+		right: 3rem;
+	}
+}
+.Light-shadow {
+	position: relative;
+	top: 4rem;
+	width: 100%;
+	height: 30rem;
+}
+#Carousel {
+   width: 50%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   float: left;
+}
+#Carousel img{
+   width: 65%;
+   height: 70%;
+   box-shadow: -4px -5px 10px rgba(0,0,0,1);
+}
+.growp {
+   width: 120px;
+   height: 20px;
+   position: absolute;
+   left: 24%;
+   bottom: 5%;
+   transform: translateX(-50%);
+   display: flex;
+   justify-content: center; 
+} 
+#growp div {
+   	height: 10px;
+   	width: 10px;
+   	border: 1px solid black;
+   	border-radius: 50%;
+   	margin: 0 auto;
+    position: relative;
+    opacity: 0.7;
+}
+#growp div img {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: -45px;
+    top: -75px;
+    display: none;
+}
+#growp div:hover img {
+    display: block;
+}
+.active {
+    	background: black;
+}
+.mask {
+	position: absolute;
+	left: 5%;
+	width: 40%;
+	height: 95%;
+	box-shadow: 13px -1px 10px rgba(0,0,0,1);
+	transform: rotate(-7deg);
+	background: white;
+	z-index: -1;
+}
+.music-list {
+	width: 45%;
+	display: inline-block;
+	margin-top: 5rem;
+	background: white;
+}
+.recommend {
+	width: 100%;
+	height: 3.5rem;
+	border-bottom: 2px solid #cc0000;
+}
+.week {
+	float: left;
+	font-size: 1.8rem;
+	color: #cc0000;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	width: 9srem;
+}
+.subweek {
+	float: left;
+	margin-top: 1.5rem;
+    width: 3.5rem;
+    height: 1rem;
+    border-left: 1px solid #f5f5f5;
+    font-size: 0.8rem;
+    color: #9c9494;
+    line-height: 1rem;
+    text-align: center;
+}
+.more {
+	float: right;
+	margin-top: 1.5rem;
+	width: 3.5rem;
+	height: 1rem;
+	font-size: 0.5rem;
+	color: #9c9494;
+	text-align: center;
+}
+.row {
+	margin-top: 2rem;
+}
+.col-md-3 {
+	display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Microsoft JhengHei";
+}
+.imgshelf {
+	position: relative;
+	width: 75%;
+	height: 75%;
+	border: 3px solid #f5f5f5;
+	box-shadow: 0px 0px 2px rgba(0,0,0,1);
+}
+.imgshelf img{
+	width: 100%;
+	height: 100%;
+}
+.mask-data {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2rem;
+	background: black;
+	opacity: 0.5;
+	color: white;
+	text-align: left;
+	line-height: 2rem;
+	font-family: "Microsoft Yahei";
+}
+.mask-data p {
+	padding-left: 10px;
+	font-size: 0.4rem;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.play {
+	position: absolute;
+	bottom: 4px;
+	right: 7px;
+	color: white;
+	opacity: 0.7;
+}
+.play:hover {
+	opacity: 1;
+}
+.Shuffling {
+	display: none;
+}
+@media (max-width: 450px){
+		.mask-data i{
+		display: none;
+	}
+	.play {
+        right: 0;
+	}
+    .subweek {
+    	width: 2.5rem;
+    }
+}
+@media (max-width: 300px){
+	.subweek {
+		display: none;
+	}
+}
+.musicmenu {
+    margin: 10rem 0 0 15rem;
+	width: 35%;
+	background: white;
+	border: 3px solid #e8e8e8;
+}
+.fa-arrow-right {
+	color: #cc0000;
+}
+.musicmenutwo {
+	display: none;
+}
+.hotshelf,.iceshelf {
+	width: 99%;
+	height: 3rem;
+	padding: 0 10px;
+    margin: 0 auto;
+    line-height: 3rem;
+    position: relative;
+
+}
+.hotshelf {
+	background: #dadada;
+}
+.iceshelf {
+	background: #e8e8e8;
+}
+.blankshelf {
+	width: 100%;
+	height: 1.5rem;
+}
+.hotshelf:hover {
+	background: #b3aeae;
+}
+.hotshelf:hover .fa-play-circle-o{
+	opacity: 1;
+}
+.iceshelf:hover .fa-play-circle-o{
+	opacity: 1;
+}
+.iceshelf:hover {
+	background: #b3aeae;
+}
+#ranking {
+	color: #cc0000;
+	font-size: 1.4rem;
+	font-weight: bold;	
+}
+.hotshelf span,.iceshelf span {
+	position: relative;
+	left: 3rem;
+	color: #4c4c4c;
+	font-size: 1.4rem;
+	font-weight: bold;
+	font-family: "Microsoft JhengHei";
+}
+#singer {
+	display: inline-block;
+	color: black;
+	font-size: 1.4rem;
+	margin-left: 5rem;
+}
+.fa-play-circle-o {
+	color: white;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+/*1270px 切换轮播效果*/
+@media (max-width: 1000px){
+	.Shuffling {
+		display: block;
+	}
+	#Carousel {
+		display: none;
+	}
+	.music-list {
+		width: 100%;
+		margin-top: 0;
+	}
+	.col-md-3 p{
+		width: 7rem;
+		overflow: hidden;
+    	white-space: nowrap;
+    	text-overflow: ellipsis;
+    }	
+    .musicmenu {
+    	display: none;
+    }
+    .musicmenutwo {
+    	display: block;
+    }
+    .hotshelf span,.iceshelf span {
+    	left: 0.5rem;
+    }
+    #singer {
+    	margin-left: 2rem;
+    }
+    .fa-play-circle-o {
+    	opacity: 1;
+    }
+}
