@@ -11,19 +11,22 @@
 			font-family: "Microsoft Yahei";
 			background: #eee;
 		}
-		div {
+		.player {
 			position: relative;
 			width: 650px;
 			height: 360px;
 			margin: 200px auto 0;
+			border: 3px solid white;
+			border-radius: 10px;
 		}
 		video {
 			width: 650px;
 			height: 360px;
+			border-radius: 10px;
 		}
 		.contorl-menu {
 			position: absolute;
-			bottom: 0;
+			bottom: 4px;
 			left: 5px;
 			width: 640px;
 			height: 50px;
