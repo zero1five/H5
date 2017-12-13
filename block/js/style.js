@@ -205,5 +205,18 @@ window.onload = function(){
 
         }
     }
+    var remind = document.getElementById('remind');
+    var body = document.getElementsByTagName('body')[0];
+    var onOff = true;
+    remind.onclick = function(){
+        if( onOff){
+            body.style.cssText = "background:black";
+            onOff = false;
+        }
+        else {
+            body.style.cssText = "background:#eee;";
+            onOff = true;
+        }
+    }
 
 }    
