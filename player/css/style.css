@@ -1,0 +1,207 @@
+body,div,p,h2,h3,li,ul {
+	padding: 0;
+	margin: 0;
+}
+a:visited, a:link, a:active {
+    text-decoration: none !important;
+    color: white !important;
+}
+a:hover {
+	text-decoration: none !important;
+	color: black !important;
+}
+#body {
+	font-size: 62.5%;
+	background: #f5f5f5;
+	font-family: "Microsoft Yahei";
+} 
+header,footer {
+	position: fixed;
+	width: 100%;
+	height: 4rem;
+}
+header {
+	z-index: 999;
+	top: 0;
+	background: #333333;
+	box-shadow: 0px 0px 10px rgba(0,0,0,10);
+}
+
+footer {
+	bottom: 0;
+	background: black;
+	background-color: rgba(0,0,0,0.8);
+}
+.submenu,.logo {
+	position: relative;
+	height: 4rem;
+	line-height: 4rem;
+	color: white;
+}
+.submenu {
+	left: 2rem;
+	display: none;
+}
+.logo {
+	left: 6.5rem;
+	font-size: 2rem;
+	display: inline-block;
+}
+.menu {
+	position: absolute;
+	right: 25vw;
+	height: 4rem;
+	display: inline-block;
+	color: white;
+	font-size: 1rem;
+	line-height: 4rem;
+	transition: all 1s;
+}
+.navmenu {
+   width: 6.5rem;
+   float: left;
+   text-align: center;
+}
+.navmenu:hover {
+    background: white;
+    transition: all 1s;
+    color: black;
+    margin-right: 1rem;
+}
+.ico {
+	margin: 0 auto;
+	display: none;
+}
+.search {
+	position:absolute;
+	right: 15rem;
+	width: 15rem;
+	height: 4rem;
+    display: inline-block;
+}
+.input {
+	width: 12rem;
+	height: 2.5rem;
+	margin: .75rem 0;
+	border-radius: 30px;
+	border: 0;
+	outline:none;
+	padding-left: 12px;
+}
+.ii {
+	position: relative;
+	right: 2.5rem;
+}
+/*整合媒体查询*/
+@media (max-width: 768px) {
+    .logo,.navmenu {
+    	display: none;
+    }
+    .submenu {
+    	display: inline-block;
+    }
+    .menu {
+    	width: 12rem;
+        left: 50%;
+        transform: translate(-50%);
+    	line-height: 4rem;
+    }
+    .ico {
+    	display: inline-block;
+    	padding: 5px 8px;
+    	width: 3.5rem;
+    	margin: 0 auto;
+    	text-align: center;
+    }
+    .search {
+    	display: none;
+    }
+}
+@media (max-width: 1350px) {
+	.search {
+		right: 3rem;
+	}
+}
+.part {
+	position: relative;
+	margin: 0 auto;
+	width: 60%;
+	height: 100%;
+}
+.part img {
+	margin: 0.5rem 0 0.5rem 20rem;
+	width: 3rem;
+	height: 3rem;
+	border: 1px solid black;
+	box-shadow: 0px 0px 2px rgba(0,0,0,2);
+}
+.control {
+	position: absolute;
+	width: 10rem;
+	height: 3rem;
+	top: 0.5rem;
+	left: 8rem;
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+.control a {
+	display: inline-block;
+	margin: 0 auto;
+	line-height: 3rem;
+}
+.musictext {
+	position: absolute;
+	left: 24rem;
+	top: 0.5rem;
+	height: 3rem;
+	color: white;
+	font-size: 12px;
+}
+.musictext p {
+	padding-left: 2rem;
+	margin:0;
+	color: gray;
+}
+.musictext h3 {
+	font-size: 16px;
+	margin: 0;
+}
+ul {
+	list-style: none;
+}
+li {
+	width: 100%;
+	height: 3.5rem;
+	border-bottom: 1px solid white;
+	position: relative;
+}
+li h3 {
+	color: black!important;
+}
+main {
+	position: relative;
+	top: 4rem;
+}
+@media (max-width: 768px) {
+	.part {
+		width: 100%;
+	}
+	.control {
+		position: absolute;
+		top: 0.5rem;
+		left: 60%;
+	}
+	.part img {
+		margin-left: 2rem;
+	}
+	.musictext {
+		left: 5.5rem;
+	}
+	li .musictext {
+		left: 2rem!important;
+	}
+}
+.active {
+	border-left: 4px solid black;
+}
