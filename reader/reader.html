@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+        html {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        body {
+            text-align: left;
+            width: 100%;
+            background: #e9dfc7;
+        }
+        .text-container {
+            font-size: 14px;
+            color: #555;
+            line-height: 31px;
+            padding: 15px;
+        }
+        .text-container h4 {
+            font-size: 20px;
+            color: #736357;
+            border-bottom: 1px solid #736357;
+            letter-spacing: 2px;
+            margin: 0 0 1em 0;
+        }
+        .text-container p {
+            text-indent: 2em;
+            margin: 0.5em 0;
+            letter-spacing: 0px;
+            line-height: 24px;
+        }
+        .top-nav {
+            position: fixed;
+            top: 0px;
+            height: 50px;
+            width: 100%;
+            z-index: 99;
+            background: #000;
+        }
+        .icon-back {
+            position: absolute;
+            top:17px;
+            left: 16px;
+            width: 23px;
+            height: 23px;
+            color: #d5d5d6;
+        }
+        .nav-title {
+            position: absolute;
+            top: 16px;
+            left: 42px;
+            color: #d5d5d6;
+        }
+        .bt-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+        }
+        .bt-left, .bt-center, .bt-right {
+            display: inline-block;
+            margin: 10px auto;
+            text-align: center;
+            color: #adadd6;
+        }
+        .bt-center i {
+            color: #ea9516;
+        }
+        #day {
+            display: none;
+        }
+        .nav-pannel {
+            position: fixed;
+            bottom: 50px;
+            height: 135px;
+            width: 100%;
+            background: #000;
+            opacity: 0.8;
+            z-index: 55;
+            color: #fff;
+        }
+        .child-mod {
+            padding: 5px 10px;
+            margin: 15px;
+
+        }
+        .child-mod span {
+            display: inline-block;
+            padding-left: 20px;
+            padding-left: 10px;
+        }
+        button {
+            background: none;
+            border: 1px solid #8c8c8c;
+            color: #fff;
+            border-radius: 16px;
+            padding: 5px 40px;
+        }
+        .child-mod button:nth-child(2){
+            margin-right: 10px;
+        }
+        .bg {
+            position: absolute;
+            left: 80px;
+            height: 10px;
+            width: 150px;
+        }
+        .white,.pink,.green,.purple,.yellow {
+            position: absolute;
+            top: -25px;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background: #fff;
+        }
+        .white {
+            left: 0;
+            background: #fff;
+        }
+        .pink {
+            left: 40px;
+            background: #f8aba6;
+        }
+        .green {
+            left: 80px;
+            background: #84bf96;
+        }
+        .purple {
+            left: 120px;
+            background: #6a6da9;
+        }
+        .yellow {
+            left: 160px;
+            background: #e9dfc7;
+        }
+        .mask {
+            position: fixed;
+            height: 40%;
+            width: 100%;
+            top: 30%;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div id="root" class="container">
+        <div class="mask" id="mask"></div>
+        <div id="top-nav" class="top-nav" style="display:none;">
+            <div class="icon-back"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+            <div class="nav-title">返回书架</div>
+        </div>
+        <div id="text-container" class="text-container">
+            <h4>所见即所得编辑器</h4>
+            <p>
+                所见即所得编辑器——创建一个在线编辑器，允许用户移动元素、创建表格、书写文本、设置颜色，而用户不必懂HTML。就像Dreamweaver或者FrontPage。如果需要例子的话，可以参看DIC。
+分页浏览器——创建一个可以分页的小型网页浏览器，可以同时浏览几个网页。简化一点的话不要考虑Javascript或者其它客户端代码。 所见即所得编辑器——创建一个在线编辑器，允许用户移动元素、创建表格、书写文本、设置颜色，而用户不必懂HTML。就像Dreamweaver或者FrontPage。如果需要例子的话，可以参看DIC。
+分页浏览器——创建一个可以分页的小型网页浏览器，可以同时浏览几个网页。简化一点的
+            </p>
+            <p>
+                    所见即所得编辑器——创建一个在线编辑器，允许用户移动元素、创建表格、书写文本、设置颜色，而用户不必懂HTML。就像Dreamweaver或者FrontPage。如果需要例子的话，可以参看DIC。
+    分页浏览器——创建一个可以分页的小型网页浏览器，可以同时浏览几个网页。简化一点的话不要考虑Javascript或者其它客户端代码。
+            </p>
+            <p>
+                所见即所得编辑器——创建一个在线编辑器，允许用户移动元素、创建表格、书写文本、设置颜色，而用户不必懂HTML。就像Dreamweaver或者FrontPage。如果需要例子的话，可以参看DIC。
+分页浏览器——创建一个可以分页的小型网页浏览器，可以同时浏览几个网页。简化一点的话不要考虑Javascript或者其它客户端代码。
+            </p>
+        </div>
+        <div class="bt-nav" style="display:none;" id="bt-nav">
+            <div class="bt-left"><i class="fa fa-bars" aria-hidden="true"></i><p>目录</p></div>
+            <div class="bt-center" id="font"><i class="fa fa-font" aria-hidden="true"></i><p>字体</p></div>
+            <div class="bt-right">
+                <div id="night">
+                    <i class="fa fa-moon-o" aria-hidden="true"></i><p>夜间</p>
+                </div>
+                <div id="day">
+                    <i class="fa fa-sun-o" aria-hidden="true"></i><p>白天</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-pannel" id="font-container" style="display:none;">
+            <div class="child-mod">
+                <span>字号</span>
+                <button id="large">大</button>
+                <button id="small">小</button>
+            </div>
+            <div class="child-mod">
+                <span>背景</span>
+                <div class="bg" id="bg">
+                    <div class="white"></div>
+                    <div class="pink"></div>
+                    <div class="purple"></div>
+                    <div class="green"></div>
+                    <div class="yellow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var mask = document.getElementById('mask');
+        var top_nav = document.getElementById('top-nav');
+        var bt_nav = document.getElementById('bt-nav');
+        var text_container = document.getElementById('text-container');
+        var onoff = true;
+        var Win = $(window);
+        var font = document.getElementById('font');
+        var font_container = document.getElementById('font-container');
+
+        mask.onclick = function(){
+            if(onoff){
+                top_nav.style.cssText = 'display:block';
+                bt_nav.style.cssText = 'display:flex';
+                onoff = false;
+            }else {
+                top_nav.style.cssText = 'display:none';
+                bt_nav.style.cssText = 'display:none';
+                font_container.style.cssText = 'display: none';
+                onoff = true;
+            }
+        }
+
+        Win.scroll(function(){
+            top_nav.style.cssText = 'display:none';
+            bt_nav.style.cssText = 'display:none';
+            font_container.style.cssText = 'display: none';
+            onoff = true;
+        });
+        font.onclick = function(){
+            font_container.style.cssText = 'display: block';
+        }
+        var large = document.getElementById('large');
+        var small = document.getElementById('small');
+        var size = 14;
+        large.onclick = function(){
+            text_container.style.fontSize = size++ + 2 + 'px';
+            if(size >= 15){
+                size = 15;
+            }
+        }
+        small.onclick = function(){
+            text_container.style.fontSize = size-- - 2 + 'px';
+            if(size < 13){
+                size = 13;
+            }
+        }
+        var bg = document.getElementById('bg');
+        var oDiv = bg.getElementsByTagName('div');
+        var array = ['#fff',
+                   '#f8aba6',
+                   '#84bf96',
+                   '#6a6da9',
+                   '#e9dfc7'
+                  ];
+
+
+    </script>
+</body>
+</html>
