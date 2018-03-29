@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/css/aui.css"/>
+    <style media="screen">
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        background-image: url(../res/img/guide/BG1.png);
+        background-size: 100% 100%;
+      }
+      #wrap {
+        width: 230px;
+        height: 450px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin: auto;
+      }
+      table{
+          width: 100%;
+      }
+      input,select,textarea{
+          padding:0;
+          outline: none;
+      }
+      .form_right input[type="text"],
+      .form_right input[type="password"]{
+          height: 60px;
+          width: 230px;
+          background: transparent;
+          border: none;
+          border-bottom: 2px solid #c9c9c9;
+          text-indent: 20px;
+          transition: .3s;
+          color: #f0f0f0;
+      }
+      .form_right input[type="text"]:hover,
+      .form_right input[type="password"]:hover{
+          border-color:#888;
+      }
+      td {
+        position: relative;
+        height: 50px;
+      }
+      .btn input{
+          width:100px;
+          height: 30px;
+          background: #362e2b;
+          color: #fff;
+      }
+      tr.des{
+          height: 120px;
+      }
+      .form_right input[type="text"]:focus,
+      .form_right input[type="password"]:focus{
+          border-bottom-color: #e6e3e3;
+      }
+      .form_right input[type="text"]:focus~.move:after{
+          transform: translateX(220px);
+      }
+      .form_right input[type="password"]::-webkit-input-placeholder,
+      .form_right input[type="text"]::-webkit-input-placeholder
+      {
+          transition: .5s;
+          font-size: 16px;
+          transform-origin: top left;
+          color: #9fb7c1;
+      }
+      .form_right input[type="password"]:focus::-webkit-input-placeholder,
+      .form_right input[type="text"]:focus::-webkit-input-placeholder{
+          transform: scale(.8) translateY(-15px);
+      }
+      .form_right img{
+        position: absolute;
+        width: 13px;
+        top: 23px;
+        left: -2px;
+      }
+      #send {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fcfcfc;
+        font-size: 14px;
+        text-decoration:underline;
+      }
+      input[name="food"]{
+          display: none;
+      }
+      .menu{
+          width: 15px;
+          height: 15px;
+          border: 1px solid #fff;
+          border-radius: 3px;
+          display: inline-block;
+          margin-right: 5px;
+          position: relative;
+      }
+      input[name="food"]:checked+ .menu:after{
+          content: '';
+          width: 2px;
+          height: 7px;
+          background: #fff;
+          display: inline-block;
+          transform: rotate(135deg);
+          position: absolute;
+          left: 5px;
+          top: 4px;
+      }
+      input[name="food"]:checked+ .menu:before{
+          content: '';
+          width: 2px;
+          height: 15px;
+          background: #fff;
+          display: inline-block;
+          transform: rotate(20deg);
+          position: absolute;
+          left:10px;
+          top: -5px;
+      }
+      .form_right span {
+        text-decoration:underline;
+      }
+      .title{
+          margin-top: 50px;
+          text-align: center;
+          font-size: 14px;
+          color: #362e2b;
+          display: flex;
+          color: #ffffff;
+      }
+      .title .tip{
+          padding: 0 20px;
+      }
+      .title .line{
+          flex: 1;
+          background: linear-gradient( to bottom, rgba(0,0,0,0) 49%, #a5a5a5 49%, #adadad 51%, rgba(0,0,0,0) 51% );
+      }
+      .tosign p {
+        margin: 20px 0;
+        text-decoration: underline;
+        color: #fff;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="wrap">
+        <form action="#">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="form_right">
+                            <img src="../res/img/guide/icon1.png" alt="icon">
+                            <input type="text" name="" placeholder="手机号" id="phoneNumber">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form_right">
+                            <img src="../res/img/guide/icon2.png" alt="icon">
+                            <input type="text" name="" placeholder="验证码">
+                            <input type="button" name="" value="获取验证码" id="send">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form_right">
+                            <img src="../res/img/guide/icon3.png" alt="icon">
+                            <input type="password" name="" placeholder="输入密码" id="pwd">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form_right" style="color: #dbdbdb; font-size: 12px;">
+                          <input id="food_c" type="checkbox" name="food" value="川菜">
+                          <label class="menu" for="food_c"></label>
+                          我同意<span>用户协议</span>和<span>隐私政策</span>
+                        </td>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <!-- 提交按钮 -->
+        <div class="aui-btn aui-btn-info aui-btn-block" id="Send_regi">完成</div>
+
+        <h2 class="title">
+            <span class="line"></span>
+            <span class="tip">OR</span>
+            <span class="line"></span>
+        </h2>
+        <div class="tosign">
+          <p>已有账号,密码登录</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../public/js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+      let oBtn = document.querySelector('#Send_regi');
+      apiready = function () {
+
+      }
+
+      oBtn.addEventListener( 'click',Send );
+
+      // 收集数据
+      function Send() {
+        let val1 = document.querySelector('#phoneNumber').value,
+            val2 = document.querySelector('#pwd').value;
+
+        if ( test(val1,val2) ) {
+          api.ajax({
+      				url: `http://app18327.p2cn.com/api/User/regp`,
+      				method: 'get',
+              data: {
+                body: `mobile=${val1}&password=${val2}`
+              }
+      		}, function(ret, err) {
+              if (ret.status == 1) {
+                alert1( '注册成功' );
+                setTimeout( api.closeFrame(),1000 );
+              } else {
+
+              }
+          })
+        }
+      }
+
+      function alert1( msg ) {
+        api.toast({
+          msg,
+          duration: 2000,
+          location: 'middle'
+          });
+      }
+
+      function  test( phone, pwd ) {
+        if (phone.length !== 11) {
+          return alert1( '手机号不正确' )
+        }
+        for ( let i =0; i < phone.length; i++ ) {
+          if ( Number(phone[i]) === Number(phone[i])) {
+          }else {
+            return alert1( '请输入正确的手机号' )
+          }
+        }
+        if (pwd.length < 6) {
+          return alert1( '密码至少需要6位' )
+        }
+        return true
+      }
+
+      document.querySelector('.tosign').onclick = () => {
+        api.openFrame({
+            name,
+            url: './sign.html',
+            rect: {
+                x: 0,
+                y: 0,
+                w: 'auto',
+                h: 'auto'
+            },
+            progress: {
+                type: "page"
+            },
+            bgColor: "#ffffff",
+            reload: false,
+            bounces: false,
+            vScrollBarEnabled: false,
+            hScrollBarEnabled: false,
+            scaleEnabled: false,
+            animation: {
+                type: "push",
+                subType: "from_right",
+                duration: 300
+            },
+        });
+      }
+  </script>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/font/iconfont.css"/>
+    <style media="screen">
+      html,body,.container {
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        background-image: url(../res/img/guide/BG.png);
+        background-size: cover;
+      }
+      .content{
+        position: fixed;
+        bottom:4.5rem;
+        left:10%;
+        width: 80%;
+      }
+      .put{
+        margin: 0.375rem auto;
+        width: 90%;
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+        padding: 0.5rem 0.375rem 0.3rem 0;
+      }
+      .put input{
+        display: inline-block;
+        padding: 0.375rem;
+        color: #fff;
+      }
+      .put .aui-col-xs-2{
+        height: 2.2rem;
+        padding: 0.25rem 0;
+        font-size: 0.75rem;
+        color: #fff;
+        text-align: center;
+      }
+      .put .aui-col-xs-2 i{
+        font-size: 1.2rem;
+      }
+      .sign{
+        text-align: center;
+        background: #46CFFD;
+        border-radius: 5px;
+        color: #fff;
+        margin: 7rem auto 0;
+        width: 90%;
+        padding: 0.5rem 0.375rem 0.3rem 0;
+      }
+      .tips{
+        margin: 0.375rem auto;
+        padding: 0.5rem 0.375rem 0.3rem 0;
+        width: 90%;
+        height: 1rem;
+        position: relative;
+        text-align: center;
+        clear: both;
+      }
+      .tips-line{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        border-top: 1px solid #ddd;
+      }
+      .tips-text{
+        color: #fff;
+        position: relative;
+        z-index: 33;
+        background: rgba(0,0,0,0)
+      }
+      .bot{
+        margin: 1.875rem  auto 0;
+        color: #fff;
+        width: 80%;
+      }
+      .bot .aui-col-xs-1{
+        text-align: center;
+      }
+      .bot .left{
+        text-align: right;
+        text-decoration: underline;
+        padding-right: 0;
+        text-align: right;  
+      }
+      .bot .right{
+        text-align: right;
+        text-decoration: underline;
+        text-align: left;
+        padding-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <form  action="" method="get">
+          <div class="put aui-row">
+            <div class="aui-col-xs-2">
+              <i class="aui-iconfont aui-icon-mobile"></i>
+            </div>
+            <div class="aui-col-xs-10">
+              <input type="number" name="mobile" placeholder="手机号">
+            </div>
+          </div>
+          <div class="put aui-row">
+            <div class="aui-col-xs-2">
+              <i class="aui-iconfont aui-icon-lock"></i>
+            </div>
+            <div class="aui-col-xs-10">
+              <input type="password" name="mobile" placeholder="密码">
+            </div>
+          </div>
+          <div class="sign">登陆</div>
+          <div class="bot aui-row">
+            <div class="aui-col-xs-5 left" onclick="api.closeFrame()">
+              注册
+            </div>
+            <div class="aui-col-xs-1">丨</div>
+            <div class="aui-col-xs-6 right">
+              忘记密码
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </body>
+  <script src="../public/js/common.js" charset="utf-8"></script>
+</html>
