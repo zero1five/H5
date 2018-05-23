@@ -8,7 +8,7 @@
  *  phone 填写手机号的输入框
  *  pwd 填写密码的输入框
  *  VerifyCode 填写验证码的输入框
- *  以上在html页面存在即可
+ *  以上在html页面存在即可(全部以id的形式绑定)
  * @author
  */
 
