@@ -1,15 +1,28 @@
-apiready = function() {
-    api.parseTapmode();
-    api.setFrameAttr({
-        name: 'forget',
-        bounces: false,
-        softInputMode: 'pan',
-    });
-    let sendVerify = document.querySelector('#sendVerify'),
-        sign = document.querySelector('.sign');
+/**
+ * 忘记密码模块
+ * @description 用于快速构建忘记密码功能模块
+ *  - app.webUrl 后台接口
+ *  - dependence common.js app.js strategies.js md5.min.js 文件引入即可
+ * @author
+ */
 
-    sendVerify.addEventListener('click', getVerifyCode);
-    sign.addEventListener('click', getFormMsg);
+let Url = app.webUrl;
+apiready = function() {
+  appInit();
+}
+
+function appInit() {
+  api.parseTapmode();
+  api.setFrameAttr({
+      name: 'forget',
+      bounces: false,
+      softInputMode: 'pan',
+  });
+  let sendVerify = document.querySelector('#sendVerify'),
+      sign = document.querySelector('.sign');
+
+  sendVerify.addEventListener('click', getVerifyCode);
+  sign.addEventListener('click', getFormMsg);
 }
 
 // 测试手机格式是否合格并发送验证码
@@ -75,7 +88,7 @@ function sendModiInfo() {
         auth = document.querySelector('#VerifyCode').value;
 
     api.ajax({
-        url: `${app.webUrl}/api/User/change_password`,
+        url: `${Url}/api/User/change_password`,
         method: 'get',
         data: {
           values: {
@@ -88,7 +101,7 @@ function sendModiInfo() {
         if (ret.status == 0) {
             PopUp(ret.desc);
             setTimeout(() => {
-                M.back()
+                M.back();
             }, 1000);
         } else if (ret.status == 1) {
             PopUp(ret.desc);
@@ -100,10 +113,12 @@ function sendModiInfo() {
 function isPhoneExist( fn ) {
   let value = document.querySelector('#phone').value;
   api.ajax({
-      url: `${app.webUrl}/api/User/select_mobile`,
+      url: `${Url}/api/User/select_mobile`,
       method: 'get',
       data: {
-          body: `mobile=${value}`
+          values: {
+            mobile: value
+          }
       }
   }, function(ret, err) {
       if (ret && ret.status == 1) {
@@ -112,13 +127,13 @@ function isPhoneExist( fn ) {
         PopUp('当前手机号还未注册')
       }
   });
-}
+};
 
 /* 验证码发送请求 */
 function sendRequest() {
     let value = document.querySelector('#phone').value;
     api.ajax({
-        url: `${app.webUrl}/api/Verification/verification`,
+        url: `${Url}/api/Verification/verification`,
         method: 'get',
         data: {
             body: `mobile=${value}`
