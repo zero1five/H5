@@ -2,7 +2,13 @@
  * 忘记密码模块
  * @description 用于快速构建忘记密码功能模块
  *  - app.webUrl 后台接口
- *  - dependence common.js app.js strategies.js md5.min.js 文件引入即可
+ *  - dependence common.js app.js strategies.js md5.min.js 文件引入即可直接即可
+ *  sendVerify 用于发送验证码的按钮
+ *  sign 用于登录的按钮
+ *  phone 填写手机号的输入框
+ *  pwd 填写密码的输入框
+ *  VerifyCode 填写验证码的输入框
+ *  以上在html页面存在即可
  * @author
  */
 
@@ -136,7 +142,9 @@ function sendRequest() {
         url: `${Url}/api/Verification/verification`,
         method: 'get',
         data: {
-            body: `mobile=${value}`
+            values: {
+              mobile: value
+            }
         }
     }, function(ret, err) {
         if (ret.status == 0) {
